@@ -1,0 +1,72 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+.products {
+ margin: 0;
+ padding: 0.5em;
+}
+
+.products a {
+ padding: 0.354em 0.5em;
+ border-radius: 0.354em;
+}
+
+.products table {
+ border-collapse: collapse;
+}
+
+.products td {
+ padding: 0.5em;
+ margin: 0;
+}
+
+.products tr.list_line_odd {
+ background-color: #effeef;
+}
+
+.products td.image {
+ /* Hide this on mobile devices */
+ display: none;
+}
+
+/* Assume anything bigger than 30em is a non-mobile device and can fit the image. */
+@media (min-width: 30em) {
+ .products td.image {
+  display: block;
+ }
+
+ .products td.image img {
+  height: 11.3em;
+ }
+}
+
+.products td.description h1 {
+ font-size: 1.4em;
+}
+
+.products td.actions ul {
+ padding: 0;
+ list-style: none;
+}
+
+.products td.actions ul li {
+ padding: 0.5em 0.5em;
+}
+
+.products tfoot td {
+ padding: 0.5em 0;
+}
