@@ -4,6 +4,7 @@ class ProductsController < ApplicationController
   # GET /products or /products.json
   def index
     @products = Product.all
+    @title = "The Great Book #{rand(1000)}"
   end
 
   # GET /products/1 or /products/1.json
